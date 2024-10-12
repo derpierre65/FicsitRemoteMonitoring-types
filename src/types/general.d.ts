@@ -31,7 +31,7 @@ type GeometryLine = {
 
 type GeometryInformation = GeometryPoint | GeometryLine;
 
-type FeatureProperty<Type extends string = string, Name extends string = string> = {
+type FeaturesProperty<Type extends string = string, Name extends string = string> = {
   name: Name;
   type: Type;
 };
@@ -45,7 +45,7 @@ export type {
   IDClassObject,
   ClassObject,
   Features,
-  FeatureProperty,
+  FeaturesProperty,
   GeometryType,
   GeometryInformation,
   GeometryPoint,

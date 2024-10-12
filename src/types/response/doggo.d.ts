@@ -1,4 +1,4 @@
-import type {ClassObject, CoordinatesWithRotation, FeatureProperty, GeometryPoint, IDClassObject} from '../general';
+import type {ClassObject, CoordinatesWithRotation, FeaturesProperty, GeometryPoint, IDClassObject} from '../general';
 
 type DoggoInventory = ClassObject & {
   Amount: number;
@@ -8,7 +8,7 @@ type Doggo = IDClassObject & {
   location: CoordinatesWithRotation;
   PlayerID: DoggoInventory[];
   features: {
-    properties: FeatureProperty<'Lizard Doggo'>;
+    properties: FeaturesProperty<'Lizard Doggo'>;
     geometry: GeometryPoint;
   };
 };

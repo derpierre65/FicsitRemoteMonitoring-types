@@ -1,4 +1,4 @@
-import type {ClassObject, CoordinatesWithRotation, FeatureProperty, Features} from '../general';
+import type {ClassObject, CoordinatesWithRotation, FeaturesProperty, Features} from '../general';
 import type {Building} from '../../enums/building';
 
 type SwitchObject = ClassObject<Building.PowerSwitch | Building.PriorityPowerSwitch> & {
@@ -9,7 +9,7 @@ type SwitchObject = ClassObject<Building.PowerSwitch | Building.PriorityPowerSwi
   IsOn: boolean;
   Primary: number;
   Secondary: number;
-  features: Features<FeatureProperty<'Power Switch'>>
+  features: Features<FeaturesProperty<'Power Switch'>>
 };
 
 type GetSwitchesResponse = SwitchObject[];
