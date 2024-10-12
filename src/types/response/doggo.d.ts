@@ -1,11 +1,10 @@
-import type {ClassObject, CoordinatesWithRotation, FeatureProperty, GeometryPoint} from '../general';
+import type {ClassObject, CoordinatesWithRotation, FeatureProperty, GeometryPoint, IDClassObject} from '../general';
 
 type DoggoInventory = ClassObject & {
   Amount: number;
 };
 
-type Doggo = ClassObject & {
-  ID: number;
+type Doggo = IDClassObject & {
   location: CoordinatesWithRotation;
   PlayerID: DoggoInventory[];
   features: {
