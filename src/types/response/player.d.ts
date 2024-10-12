@@ -1,4 +1,4 @@
-import type {ClassAndName, CoordinatesWithRotation, GeometryPoint} from '../general';
+import type {ClassAndName, CoordinatesWithRotation, FeatureProperty, GeometryPoint} from '../general';
 
 type Player = ClassAndName & {
   ID: number;
@@ -6,10 +6,7 @@ type Player = ClassAndName & {
   PlayerHP: number;
   Dead: boolean;
   features: {
-    properties: {
-      name: string;
-      type: 'Player';
-    };
+    properties: FeatureProperty<'Player'>;
     geometry: GeometryPoint;
   }
 };

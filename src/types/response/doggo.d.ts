@@ -1,4 +1,4 @@
-import type {ClassAndName, CoordinatesWithRotation, GeometryPoint} from '../general';
+import type {ClassAndName, CoordinatesWithRotation, FeatureProperty, GeometryPoint} from '../general';
 
 type DoggoInventory = ClassAndName & {
   Amount: number;
@@ -9,10 +9,7 @@ type Doggo = ClassAndName & {
   location: CoordinatesWithRotation;
   PlayerID: DoggoInventory[];
   features: {
-    properties: {
-      name: string;
-      type: 'Lizard Doggo';
-    };
+    properties: FeatureProperty<'Lizard Doggo'>;
     geometry: GeometryPoint;
   };
 };

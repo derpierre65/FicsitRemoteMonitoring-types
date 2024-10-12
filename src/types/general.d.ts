@@ -27,7 +27,7 @@ type GeometryLine = {
 
 type GeometryInformation = GeometryPoint | GeometryLine;
 
-type FeatureProperty<Name extends string = string, Type extends string = string> = {
+type FeatureProperty<Type extends string = string, Name extends string = string> = {
   name: Name;
   type: Type;
 };

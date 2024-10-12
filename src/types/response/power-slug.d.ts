@@ -4,7 +4,7 @@ type PowerSlugObject = ClassAndName & {
   ID: number;
   location: CoordinatesWithRotation;
   features: {
-    properties: FeatureProperty<'', 'Power Slug'>,
+    properties: FeatureProperty<'Power Slug', ''>,
     geometry: GeometryPoint;
   }
 };
