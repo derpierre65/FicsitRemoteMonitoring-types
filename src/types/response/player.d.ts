@@ -1,13 +1,10 @@
-import type {CoordinatesWithRotation, FeaturesProperty, GeometryPoint, IDClassObject} from '../general';
+import type {CoordinatesWithRotation, Features, FeaturesProperty, IDClassObject} from '../general';
 
 type Player = IDClassObject & {
   location: CoordinatesWithRotation;
   PlayerHP: number;
   Dead: boolean;
-  features: {
-    properties: FeaturesProperty<'Player'>;
-    geometry: GeometryPoint;
-  }
+  features: Features<FeaturesProperty<'Player'>>;
 };
 
 type GetPlayerResponse = Player[];

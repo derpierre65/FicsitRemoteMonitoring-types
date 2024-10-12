@@ -1,11 +1,8 @@
-import type {CoordinatesWithRotation, FeaturesProperty, GeometryPoint, IDClassObject} from '../general';
+import type {CoordinatesWithRotation, Features, FeaturesProperty, IDClassObject} from '../general';
 
 type PowerSlugObject = IDClassObject & {
   location: CoordinatesWithRotation;
-  features: {
-    properties: FeaturesProperty<'Power Slug', ''>,
-    geometry: GeometryPoint;
-  }
+  features: Features<FeaturesProperty<'Power Slug', ''>>
 };
 
 type GetPowerSlugResponse = PowerSlugObject[];

@@ -1,4 +1,10 @@
-import type {ClassObject, CoordinatesWithRotation, FeaturesProperty, GeometryPoint, IDClassObject} from '../general';
+import type {
+  ClassObject,
+  CoordinatesWithRotation,
+  Features,
+  FeaturesProperty,
+  IDClassObject
+} from '../general';
 
 type DoggoInventory = ClassObject & {
   Amount: number;
@@ -7,10 +13,7 @@ type DoggoInventory = ClassObject & {
 type Doggo = IDClassObject & {
   location: CoordinatesWithRotation;
   PlayerID: DoggoInventory[];
-  features: {
-    properties: FeaturesProperty<'Lizard Doggo'>;
-    geometry: GeometryPoint;
-  };
+  features: Features<FeaturesProperty<'Lizard Doggo'>>;
 };
 
 type GetDoggoResponse = Doggo[];
