@@ -1,5 +1,10 @@
 type GeometryType = 'Point';
 
+type ClassAndName = {
+  Name: string;
+  ClassName: string;
+};
+
 type Coordinates = {
   x: number;
   y: number;
@@ -23,6 +28,7 @@ type GeometryLine = {
 type GeometryInformation = GeometryPoint | GeometryLine;
 
 export type {
+  ClassAndName,
   GeometryType,
   GeometryInformation,
   GeometryPoint,

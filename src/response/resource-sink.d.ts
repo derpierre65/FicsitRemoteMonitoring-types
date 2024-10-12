@@ -1,6 +1,6 @@
-type GetResourceSinkResponse = {
-  Name: string;
-  ClassName: string;
+import {ClassAndName} from '../general';
+
+type GetResourceSinkResponse = ClassAndName & {
   CouponType: {
     Name: string;
     ClassName: string;
