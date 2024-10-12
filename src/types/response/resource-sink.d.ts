@@ -1,7 +1,7 @@
-import type {ClassAndName} from '../general';
+import type {ClassObject} from '../general';
 
-type GetResourceSinkResponse = ClassAndName & {
-  CouponType: ClassAndName;
+type GetResourceSinkResponse = ClassObject & {
+  CouponType: ClassObject;
   NumCoupon: number;
   Percent: number;
   GraphPoints: [

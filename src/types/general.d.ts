@@ -1,9 +1,13 @@
 type GeometryType = 'Point';
 
-type ClassAndName<ClassName extends string = string> = {
+type ClassObject<ClassName extends string = string> = {
   Name: string;
   ClassName: ClassName;
 };
+
+type IDClassObject<ClassName extends string = string> = ClassObject<ClassName> & {
+  ID: number;
+}
 
 type Coordinates = {
   x: number;
@@ -33,7 +37,8 @@ type FeatureProperty<Type extends string = string, Name extends string = string>
 };
 
 export type {
-  ClassAndName,
+  IDClassObject,
+  ClassObject,
   FeatureProperty,
   GeometryType,
   GeometryInformation,

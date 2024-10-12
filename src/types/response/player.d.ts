@@ -1,6 +1,6 @@
-import type {ClassAndName, CoordinatesWithRotation, FeatureProperty, GeometryPoint} from '../general';
+import type {ClassObject, CoordinatesWithRotation, FeatureProperty, GeometryPoint} from '../general';
 
-type Player = ClassAndName & {
+type Player = ClassObject & {
   ID: number;
   location: CoordinatesWithRotation;
   PlayerHP: number;
