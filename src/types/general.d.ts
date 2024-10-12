@@ -36,9 +36,15 @@ type FeatureProperty<Type extends string = string, Name extends string = string>
   type: Type;
 };
 
+type Features<Property, Geometry extends GeometryInformation = GeometryPoint> = {
+  properties: Property;
+  geometry: Geometry;
+};
+
 export type {
   IDClassObject,
   ClassObject,
+  Features,
   FeatureProperty,
   GeometryType,
   GeometryInformation,
