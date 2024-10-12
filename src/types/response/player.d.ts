@@ -1,4 +1,4 @@
-import {ClassAndName, CoordinatesWithRotation, GeometryPoint} from '../general';
+import type {ClassAndName, CoordinatesWithRotation, GeometryPoint} from '../general';
 
 type Player = ClassAndName & {
   ID: number;
