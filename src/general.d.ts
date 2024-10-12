@@ -1,17 +1,32 @@
 type GeometryType = 'Point';
 
-type GameCoordinates = {
+type Coordinates = {
   x: number;
   y: number;
   z: number;
 };
 
-type GameCoordinatesWithRotation = GameCoordinates & {
+type CoordinatesWithRotation = Coordinates & {
   rotation: number;
 };
 
+type GeometryPoint = {
+  type: 'Point';
+  coordinates: Coordinates;
+};
+
+type GeometryLine = {
+  type: 'Line';
+  coordinates: Coordinates[];
+};
+
+type GeometryInformation = GeometryPoint | GeometryLine;
+
 export type {
   GeometryType,
-  GameCoordinates,
-  GameCoordinatesWithRotation,
+  GeometryInformation,
+  GeometryPoint,
+  GeometryLine,
+  Coordinates,
+  CoordinatesWithRotation,
 }
