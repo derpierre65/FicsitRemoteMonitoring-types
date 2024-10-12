@@ -1,10 +1,7 @@
 import {ClassAndName} from '../general';
 
 type GetResourceSinkResponse = ClassAndName & {
-  CouponType: {
-    Name: string;
-    ClassName: string;
-  };
+  CouponType: ClassAndName;
   NumCoupon: number;
   Percent: number;
   GraphPoints: [
@@ -23,6 +20,9 @@ type GetResourceSinkResponse = ClassAndName & {
   PointsToCoupon: number;
 };
 
+type GetExplorationSinkResponse = GetResourceSinkResponse;
+
 export type {
   GetResourceSinkResponse,
+  GetExplorationSinkResponse,
 };
