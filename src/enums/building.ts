@@ -9,6 +9,7 @@ enum Building {
   Manufacturer = 'Build_ManufacturerMk1_C',
   Blender = 'Build_Blender_C',
   ParticleAccelerator = 'Build_HadronCollider_C',
+  Hub = 'Build_HubTerminal_C',
 }
 
 export {
