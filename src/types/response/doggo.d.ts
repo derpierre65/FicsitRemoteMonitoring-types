@@ -1,18 +1,14 @@
 import type {
-  ClassObject,
   CoordinatesWithRotation,
   Features,
   FeaturesProperty,
-  IDClassObject
+  IDClassObject,
+  InventoryItemObject,
 } from '../general';
-
-type DoggoInventory = ClassObject & {
-  Amount: number;
-};
 
 type Doggo = IDClassObject & {
   location: CoordinatesWithRotation;
-  PlayerID: DoggoInventory[];
+  PlayerID: InventoryItemObject[];
   features: Features<FeaturesProperty<'Lizard Doggo'>>;
 };
 
@@ -20,6 +16,5 @@ type GetDoggoResponse = Doggo[];
 
 export type {
   GetDoggoResponse,
-  DoggoInventory,
   Doggo,
 };
