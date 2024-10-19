@@ -1,4 +1,4 @@
-type ModListInfo = {
+type ModListObject = {
   Name: string;
   SMRName: string;
   Version: string;
@@ -10,9 +10,9 @@ type ModListInfo = {
   RequiredOnRemote: boolean;
 };
 
-type GetModListResponse = ModListInfo[];
+type GetModListResponse = ModListObject[];
 
 export type {
   GetModListResponse,
-  ModListInfo,
+  ModListObject,
 };

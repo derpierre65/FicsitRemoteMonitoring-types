@@ -1,7 +1,7 @@
 import type {ClassObject} from '../general';
 import type {ItemType} from '../../enums/item-type';
 
-type ProdStatsData = ClassObject & {
+type ProdStatsObject = ClassObject & {
   ProdPerMin: string;
   ProdPercent: number;
   ConsPercent: number;
@@ -12,9 +12,9 @@ type ProdStatsData = ClassObject & {
   Type: ItemType;
 };
 
-type GetProdStatsResponse = ProdStatsData[];
+type GetProdStatsResponse = ProdStatsObject[];
 
 export type {
-  ProdStatsData,
+  ProdStatsObject,
   GetProdStatsResponse,
 }

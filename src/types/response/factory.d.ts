@@ -12,34 +12,34 @@ type FactoryType = Building.Refinery
 
 type FactoryObject<Type extends FactoryType = FactoryType> = ClassObject<Type> & {
   location: CoordinatesWithRotation;
-  production: FactoryProductionInfo[];
+  production: FactoryProductionObject[];
   Recipe: string;
   RecipeClassName: string; // Recipe_..._C
-  ingredients: FactoryIngredient[];
+  ingredients: FactoryIngredientObject[];
   ManuSpeed: number;
   IsConfigured: boolean;
   IsProducing: boolean;
   IsPaused: boolean;
-  PowerInfo: FactoryPowerInfo[];
+  PowerInfo: FactoryPowerInfoObject[];
   CircuitID: number;
   features: Features<FeaturesProperty>
 };
 
-type FactoryIngredient = ClassObject & {
+type FactoryIngredientObject = ClassObject & {
   Amount: number;
   CurrentConsumed: number;
   MaxConsumed: number;
   ConsPercent: number;
 };
 
-type FactoryProductionInfo = ClassObject & {
+type FactoryProductionObject = ClassObject & {
   Amount: number;
   CurrentProd: number;
   MaxProd: number;
   ProdPercent: number;
 };
 
-type FactoryPowerInfo = {
+type FactoryPowerInfoObject = {
   CircuitID: number;
   PowerConsumed: number;
 };
@@ -57,9 +57,9 @@ type GetParticleResponse = FactoryObject<Building.ParticleAccelerator>[];
 export type {
   FactoryType,
   FactoryObject,
-  FactoryIngredient,
-  FactoryProductionInfo,
-  FactoryPowerInfo,
+  FactoryIngredientObject,
+  FactoryProductionObject,
+  FactoryPowerInfoObject,
   GetFactoryResponse,
   GetSmelterResponse,
   GetConstructorResponse,

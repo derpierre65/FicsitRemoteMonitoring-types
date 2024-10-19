@@ -1,7 +1,7 @@
 import type {ClassObject, CoordinatesWithRotation, Features, FeaturesProperty} from '../general';
 import type {Building} from '../../enums/building';
 
-type HubTerminalData = ClassObject<Building.Hub> & {
+type HubTerminalObject = ClassObject<Building.Hub> & {
   location: CoordinatesWithRotation;
   ShipDock: boolean;
   SchNam: 'N/A' | string;
@@ -9,9 +9,9 @@ type HubTerminalData = ClassObject<Building.Hub> & {
   features: Features<FeaturesProperty>;
 };
 
-type GetHubTerminalResponse = HubTerminalData[];
+type GetHubTerminalResponse = HubTerminalObject[];
 
 export type {
-  HubTerminalData,
+  HubTerminalObject,
   GetHubTerminalResponse,
 }

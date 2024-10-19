@@ -1,4 +1,4 @@
-type PowerCircuitInformation = {
+type PowerObject = {
   CircuitID: number;
   PowerProduction: number;
   PowerConsumed: number;
@@ -14,9 +14,9 @@ type PowerCircuitInformation = {
   FuseTriggered: boolean;
 };
 
-type GetPowerResponse = PowerCircuitInformation[];
+type GetPowerResponse = PowerObject[];
 
 export type {
-  PowerCircuitInformation,
+  PowerObject,
   GetPowerResponse,
 };

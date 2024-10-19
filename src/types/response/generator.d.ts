@@ -1,7 +1,7 @@
 import type {ClassObject, CoordinatesWithRotation, Features, FeaturesProperty, InventoryItemObject} from '../general';
 import {Building} from '../../enums/building';
 
-type GeneratorData<ClassName> = ClassObject<ClassName> & {
+type GeneratorObject<ClassName> = ClassObject<ClassName> & {
   location: CoordinatesWithRotation;
   CircuitID: number;
   BaseProd: number;
@@ -32,21 +32,21 @@ type GeneratorData<ClassName> = ClassObject<ClassName> & {
   features: Features<FeaturesProperty>;
 };
 
-type GetGeneratorsResponse = GeneratorData<
+type GetGeneratorsResponse = GeneratorObject<
   Building.FuelGenerator |
   Building.CoalGenerator |
   Building.BiomassBurner |
   Building.GeothermalGenerator |
   Building.NuclearPowerPlant
 >[];
-type GetCoalGeneratorResponse = GeneratorData<Building.CoalGenerator>[];
-type GetFuelGeneratorResponse = GeneratorData<Building.FuelGenerator>[];
-type GetNuclearGeneratorResponse = GeneratorData<Building.NuclearPowerPlant>[];
-type GetGeothermalGeneratorResponse = GeneratorData<Building.GeothermalGenerator>[];
-type GetBiomassGeneratorResponse = GeneratorData<Building.BiomassBurner>[];
+type GetCoalGeneratorResponse = GeneratorObject<Building.CoalGenerator>[];
+type GetFuelGeneratorResponse = GeneratorObject<Building.FuelGenerator>[];
+type GetNuclearGeneratorResponse = GeneratorObject<Building.NuclearPowerPlant>[];
+type GetGeothermalGeneratorResponse = GeneratorObject<Building.GeothermalGenerator>[];
+type GetBiomassGeneratorResponse = GeneratorObject<Building.BiomassBurner>[];
 
 export type {
-  GeneratorData,
+  GeneratorObject,
   GetGeneratorsResponse,
   GetCoalGeneratorResponse,
   GetFuelGeneratorResponse,

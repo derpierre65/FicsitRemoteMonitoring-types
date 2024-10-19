@@ -5,16 +5,17 @@ import type {
   IDClassObject,
   InventoryItemObject,
 } from '../general';
+import {EntityType} from '../../enums/entity-type';
 
-type Doggo = IDClassObject & {
+type DoggoObject = IDClassObject<EntityType.Doggo> & {
   location: CoordinatesWithRotation;
-  PlayerID: InventoryItemObject[];
+  Inventory: InventoryItemObject[];
   features: Features<FeaturesProperty<'Lizard Doggo'>>;
 };
 
-type GetDoggoResponse = Doggo[];
+type GetDoggoResponse = DoggoObject[];
 
 export type {
   GetDoggoResponse,
-  Doggo,
+  DoggoObject,
 };

@@ -1,15 +1,15 @@
 import type {CoordinatesWithRotation, Features, FeaturesProperty, IDClassObject} from '../general';
 
-type Player = IDClassObject & {
+type PlayerObject = IDClassObject & {
   location: CoordinatesWithRotation;
   PlayerHP: number;
   Dead: boolean;
   features: Features<FeaturesProperty<'Player'>>;
 };
 
-type GetPlayerResponse = Player[];
+type GetPlayerResponse = PlayerObject[];
 
 export type {
   GetPlayerResponse,
-  Player,
+  PlayerObject,
 }

@@ -1,6 +1,6 @@
 import type {ClassObject} from '../general';
 
-type GetResourceSinkObject = ClassObject & {
+type ResourceSinkObject = ClassObject & {
   CouponType: ClassObject;
   NumCoupon: number;
   Percent: number;
@@ -20,11 +20,11 @@ type GetResourceSinkObject = ClassObject & {
   PointsToCoupon: number;
 };
 
-type GetResourceSinkResponse = GetResourceSinkObject[];
-type GetExplorationSinkResponse = GetResourceSinkObject[];
+type GetResourceSinkResponse = ResourceSinkObject[];
+type GetExplorationSinkResponse = ResourceSinkObject[];
 
 export type {
-  GetResourceSinkObject,
+  ResourceSinkObject,
   GetResourceSinkResponse,
   GetExplorationSinkResponse,
 };
