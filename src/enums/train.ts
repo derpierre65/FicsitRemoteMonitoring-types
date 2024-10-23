@@ -9,4 +9,19 @@ enum TrainDockingStatus {
   WaitingToStart = 'Waiting To Start',
 }
 
-export {TrainDockingStatus};
+enum TrainLoadingMode {
+  Unloading = 'Unloading',
+  Loading = 'Unloading',
+}
+
+enum TrainLoadingStatus {
+  Idle = 'Idle',
+  Unloading = 'Unloading',
+  Loading = 'Unloading',
+}
+
+export {
+  TrainDockingStatus,
+  TrainLoadingMode,
+  TrainLoadingStatus,
+};
