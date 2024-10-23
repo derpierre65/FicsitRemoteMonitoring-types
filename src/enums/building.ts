@@ -15,6 +15,7 @@ enum Building {
   Blender = 'Build_Blender_C',
   ParticleAccelerator = 'Build_HadronCollider_C',
   Hub = 'Build_HubTerminal_C',
+  RadarTower = 'Build_RadarTower_C',
   SpaceElevator = 'Build_SpaceElevator_C',
   TrainDockingStation = 'Build_TrainDockingStation_C',
 }
