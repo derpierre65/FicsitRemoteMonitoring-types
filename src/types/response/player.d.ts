@@ -1,7 +1,8 @@
 import type {CoordinatesWithRotation, Features, FeaturesProperty, IDClassObject} from '../general';
 
-type PlayerObject = IDClassObject & {
+type PlayerObject = IDClassObject<'Char_Player_C'> & {
   location: CoordinatesWithRotation;
+  Online: boolean;
   PlayerHP: number;
   Dead: boolean;
   features: Features<FeaturesProperty<'Player'>>;
