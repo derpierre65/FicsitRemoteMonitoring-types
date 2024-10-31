@@ -1,8 +1,9 @@
 import type {
-  ClassObject,
+  IDClassObject,
   Features,
-  FeaturesProperty,
-  HasLocationWIthRotation
+  HasLocationWIthRotation,
+  InventoryItemObject,
+  PowerInfoObject,
 } from '../general';
 import type {Building} from '../../enums/building';
 
@@ -15,37 +16,30 @@ type FactoryType = Building.Refinery
   | Building.ParticleAccelerator
   | Building.Foundry;
 
-type FactoryObject<Type extends FactoryType = FactoryType> = ClassObject<Type> & HasLocationWIthRotation & {
-  production: FactoryProductionObject[];
-  Recipe: string;
-  RecipeClassName: string; // Recipe_..._C
-  ingredients: FactoryIngredientObject[];
-  ManuSpeed: number;
-  IsConfigured: boolean;
-  IsProducing: boolean;
-  IsPaused: boolean;
-  PowerInfo: FactoryPowerInfoObject[];
-  CircuitID: number;
-  features: Features<FeaturesProperty>
-};
-
-type FactoryIngredientObject = ClassObject & {
-  Amount: number;
+type FactoryIngredientObject = InventoryItemObject & {
   CurrentConsumed: number;
   MaxConsumed: number;
   ConsPercent: number;
 };
 
-type FactoryProductionObject = ClassObject & {
-  Amount: number;
+type FactoryProductionObject = InventoryItemObject & {
   CurrentProd: number;
   MaxProd: number;
   ProdPercent: number;
 };
 
-type FactoryPowerInfoObject = {
-  CircuitID: number;
-  PowerConsumed: number;
+type FactoryObject<Type extends FactoryType = FactoryType> = IDClassObject<Type> & HasLocationWIthRotation & {
+  Recipe: string;
+  RecipeClassName: string;
+  production: FactoryProductionObject[];
+  ingredients: FactoryIngredientObject[];
+  Productivity: number;
+  ManuSpeed: number;
+  IsConfigured: boolean;
+  IsProducing: boolean;
+  IsPaused: boolean;
+  PowerInfo: PowerInfoObject[];
+  features: Features;
 };
 
 type GetFactoryResponse = FactoryObject[];

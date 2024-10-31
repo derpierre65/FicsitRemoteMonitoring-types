@@ -1,6 +1,5 @@
 import type {
   ClassObject,
-  CoordinatesWithRotation,
   FeaturesProperty,
   Features,
   HasLocationWIthRotation

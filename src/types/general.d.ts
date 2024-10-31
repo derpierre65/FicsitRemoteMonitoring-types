@@ -38,13 +38,20 @@ type FeaturesProperty<Type extends string = string, Name extends string = string
   type: Type;
 };
 
-type Features<Property, Geometry extends GeometryInformation = GeometryPoint> = {
+type Features<Property = FeaturesProperty, Geometry extends GeometryInformation = GeometryPoint> = {
   properties: Property;
   geometry: Geometry;
 };
 
+type PowerInfoObject = {
+  CircuitGroupID: number;
+  CircuitID: number;
+  PowerConsumed: number;
+  MaxPowerConsumed: number;
+};
+
 type HasLocationWIthRotation = {
-  location: HasLocationWIthRotation;
+  location: CoordinatesWithRotation;
 };
 
 type HasLocation = {
@@ -55,6 +62,7 @@ export type {
   ClassObject,
   IDClassObject,
   InventoryItemObject,
+  PowerInfoObject,
   Features,
   FeaturesProperty,
   GeometryInformation,
