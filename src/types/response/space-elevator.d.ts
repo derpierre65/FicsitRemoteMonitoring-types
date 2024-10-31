@@ -7,7 +7,7 @@ import type {
 } from '../general';
 import type {Building} from '../../enums/building';
 
-type SpaceElevatorPhaseItem = InventoryItemObject & {
+type SpaceElevatorPhaseItemObject = InventoryItemObject & {
   RemainingCost: number;
   TotalCost: number;
 };
@@ -22,7 +22,7 @@ type SpaceElevatorObject = ClassObject<Building.SpaceElevator> & HasLocationWIth
 type GetSpaceElevatorResponse = SpaceElevatorObject[];
 
 export {
+  SpaceElevatorPhaseItemObject,
   SpaceElevatorObject,
-  SpaceElevatorPhaseItem,
   GetSpaceElevatorResponse,
 };

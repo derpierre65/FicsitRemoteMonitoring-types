@@ -1,8 +1,10 @@
 export type * from './general';
+export type * from './response/belt';
 export type * from './response/doggo';
 export type * from './response/factory';
 export type * from './response/generator';
 export type * from './response/hub-terminal';
+export type * from './response/inventory';
 export type * from './response/mod-list';
 export type * from './response/player';
 export type * from './response/power';
