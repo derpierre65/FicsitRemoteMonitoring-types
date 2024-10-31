@@ -1,4 +1,9 @@
-import type {ClassObject, CoordinatesWithRotation, Features, FeaturesProperty} from '../general';
+import type {
+  ClassObject,
+  Features,
+  FeaturesProperty,
+  HasLocationWIthRotation
+} from '../general';
 import type {Building} from '../../enums/building';
 
 type FactoryType = Building.Refinery
@@ -10,8 +15,7 @@ type FactoryType = Building.Refinery
   | Building.ParticleAccelerator
   | Building.Foundry;
 
-type FactoryObject<Type extends FactoryType = FactoryType> = ClassObject<Type> & {
-  location: CoordinatesWithRotation;
+type FactoryObject<Type extends FactoryType = FactoryType> = ClassObject<Type> & HasLocationWIthRotation & {
   production: FactoryProductionObject[];
   Recipe: string;
   RecipeClassName: string; // Recipe_..._C

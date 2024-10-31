@@ -1,8 +1,12 @@
-import type {ClassObject, CoordinatesWithRotation, Features, FeaturesProperty} from '../general';
+import type {
+  ClassObject,
+  Features,
+  FeaturesProperty,
+  HasLocationWIthRotation
+} from '../general';
 import type {Building} from '../../enums/building';
 
-type HubTerminalObject = ClassObject<Building.Hub> & {
-  location: CoordinatesWithRotation;
+type HubTerminalObject = ClassObject<Building.Hub> & HasLocationWIthRotation & {
   ShipDock: boolean;
   SchNam: 'N/A' | string;
   ShipReturn: string;

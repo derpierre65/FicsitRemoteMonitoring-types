@@ -43,6 +43,14 @@ type Features<Property, Geometry extends GeometryInformation = GeometryPoint> = 
   geometry: Geometry;
 };
 
+type HasLocationWIthRotation = {
+  location: HasLocationWIthRotation;
+};
+
+type HasLocation = {
+  location: Coordinates;
+};
+
 export type {
   ClassObject,
   IDClassObject,
@@ -54,4 +62,6 @@ export type {
   GeometryLine,
   Coordinates,
   CoordinatesWithRotation,
+  HasLocationWIthRotation,
+  HasLocation,
 }

@@ -1,7 +1,11 @@
-import type {CoordinatesWithRotation, Features, FeaturesProperty, IDClassObject} from '../general';
+import type {
+  Features,
+  FeaturesProperty,
+  HasLocationWIthRotation,
+  IDClassObject
+} from '../general';
 
-type PowerSlugObject = IDClassObject & {
-  location: CoordinatesWithRotation;
+type PowerSlugObject = IDClassObject & HasLocationWIthRotation & {
   features: Features<FeaturesProperty<'Power Slug', ''>>
 };
 

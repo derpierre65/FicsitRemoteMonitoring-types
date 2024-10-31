@@ -1,8 +1,13 @@
-import type {ClassObject, CoordinatesWithRotation, Features, FeaturesProperty, InventoryItemObject} from '../general';
+import type {
+  ClassObject,
+  Features,
+  FeaturesProperty,
+  HasLocationWIthRotation,
+  InventoryItemObject
+} from '../general';
 import {Building} from '../../enums/building';
 
-type GeneratorObject<ClassName> = ClassObject<ClassName> & {
-  location: CoordinatesWithRotation;
+type GeneratorObject<ClassName> = ClassObject<ClassName> & HasLocationWIthRotation & {
   CircuitID: number;
   BaseProd: number;
   DynamicProdCapacity: number;

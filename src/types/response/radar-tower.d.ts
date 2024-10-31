@@ -1,8 +1,13 @@
-import type {ClassObject, CoordinatesWithRotation, Features, FeaturesProperty, InventoryItemObject} from '../general';
+import type {
+  ClassObject,
+  Features,
+  FeaturesProperty,
+  HasLocationWIthRotation,
+  InventoryItemObject
+} from '../general';
 import type {Building} from '../../enums/building';
 
-type TowerObject = ClassObject<Building.RadarTower> & {
-  location: CoordinatesWithRotation;
+type TowerObject = ClassObject<Building.RadarTower> & HasLocationWIthRotation & {
   RevealRadius: number;
   RevealType: 'FOWRT_StaticNoGradient';
   Fauna: InventoryItemObject[];

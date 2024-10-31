@@ -1,8 +1,13 @@
-import type {ClassObject, CoordinatesWithRotation, Features, FeaturesProperty, InventoryItemObject} from '../general';
+import type {
+  ClassObject,
+  Features,
+  FeaturesProperty,
+  HasLocationWIthRotation,
+  InventoryItemObject
+} from '../general';
 import type {Building} from '../../enums/building';
 
-type SpaceElevatorObject = ClassObject<Building.SpaceElevator> & {
-  location: CoordinatesWithRotation;
+type SpaceElevatorObject = ClassObject<Building.SpaceElevator> & HasLocationWIthRotation & {
   Inventory: []; // currently broken
   PhaseCost: InventoryItemObject[];
   FullyUpgraded: boolean;

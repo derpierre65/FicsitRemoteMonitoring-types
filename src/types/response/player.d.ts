@@ -1,7 +1,11 @@
-import type {CoordinatesWithRotation, Features, FeaturesProperty, IDClassObject} from '../general';
+import type {
+  Features,
+  FeaturesProperty,
+  HasLocationWIthRotation,
+  IDClassObject
+} from '../general';
 
-type PlayerObject = IDClassObject<'Char_Player_C'> & {
-  location: CoordinatesWithRotation;
+type PlayerObject = IDClassObject<'Char_Player_C'> & HasLocationWIthRotation & {
   Online: boolean;
   PlayerHP: number;
   Dead: boolean;
