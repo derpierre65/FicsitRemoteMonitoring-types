@@ -1,8 +1,9 @@
 import type {Features, FeaturesProperty, HasLocationWIthRotation, IDClassObject} from '../general';
+import {ResourceNodePurity} from '../../enums/resource';
 
 type ResourceNodeObject = IDClassObject & HasLocationWIthRotation & {
   Purity: string;
-  EnumPurity: string;
+  EnumPurity: ResourceNodePurity;
   ResourceForm: string;
   NodeType: string;
   Exploited: boolean;
