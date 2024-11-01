@@ -21,12 +21,12 @@ type TrainObject = ClassObject & HasLocationWIthRotation & {
   TimeTable: {
     StationName: string;
   }[];
-  Vehicles: ClassObject & {
+  Vehicles: (ClassObject & {
     TotalMass: number;
     PayloadMass: number;
     MaxPayloadMass: number;
     Inventory: InventoryItemObject[];
-  }[];
+  })[];
   features: Features<FeaturesProperty<'Train'>>;
 };
 
