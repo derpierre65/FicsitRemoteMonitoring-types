@@ -1,6 +1,6 @@
-import type {Features, FeaturesProperty, HasLocationWIthRotation, IDClassObject, PowerInfoObject} from '../general';
+import type {Features, FeaturesProperty, HasLocationWithRotation, IDClassObject, PowerInfoObject} from '../general';
 
-type DroneObject = IDClassObject & HasLocationWIthRotation & {
+type DroneObject = IDClassObject & HasLocationWithRotation & {
   HomeStation: string;
   PairedStation: string;
   CurrentDestination: string;
@@ -9,7 +9,7 @@ type DroneObject = IDClassObject & HasLocationWIthRotation & {
   features: Features<FeaturesProperty<'Drone', 'Drone'>>;
 };
 
-type DroneStationObject = IDClassObject & HasLocationWIthRotation & {
+type DroneStationObject = IDClassObject & HasLocationWithRotation & {
   InputInventory: unknown[];
   OutputInventory: InventoryItemObject[];
   FuelInventory: InventoryItemObject[];

@@ -1,13 +1,13 @@
 import type {
   ClassObject,
   Features,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   InventoryItemObject,
   PowerInfoObject,
 } from '../general';
 import {Building} from '../../enums/building';
 
-type GeneratorObject<ClassName> = ClassObject<ClassName> & HasLocationWIthRotation & {
+type GeneratorObject<ClassName> = ClassObject<ClassName> & HasLocationWithRotation & {
   BaseProd: number;
   DynamicProdCapacity: number;
   DynamicProdDemandFactor: number;

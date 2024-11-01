@@ -1,6 +1,6 @@
-import type {Features, FeaturesProperty, HasLocationWIthRotation} from '../general';
+import type {Features, FeaturesProperty, HasLocationWithRotation} from '../general';
 
-type DropPodObject = HasLocationWIthRotation & {
+type DropPodObject = HasLocationWithRotation & {
   ID: string;
   Opened: boolean;
   Looted: boolean;

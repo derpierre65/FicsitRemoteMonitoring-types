@@ -2,7 +2,7 @@ import type {
   ClassObject,
   Features,
   FeaturesProperty,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   InventoryItemObject
 } from '../general';
 import type {Building} from '../../enums/building';
@@ -12,7 +12,7 @@ type SpaceElevatorPhaseItemObject = InventoryItemObject & {
   TotalCost: number;
 };
 
-type SpaceElevatorObject = ClassObject<Building.SpaceElevator> & HasLocationWIthRotation & {
+type SpaceElevatorObject = ClassObject<Building.SpaceElevator> & HasLocationWithRotation & {
   CurrentPhase: InventoryItemObject[];
   FullyUpgraded: boolean;
   UpgradeReady: boolean;

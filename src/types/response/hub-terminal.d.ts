@@ -1,7 +1,7 @@
 import type {
   ClassObject,
   Features,
-  HasLocationWIthRotation, InventoryItemObject
+  HasLocationWithRotation, InventoryItemObject
 } from '../general';
 import type {Building} from '../../enums/building';
 
@@ -15,7 +15,7 @@ type HubTerminalActiveMilestoneObject = ClassObject & {
   })[];
 };
 
-type HubTerminalObject = ClassObject<Building.Hub> & HasLocationWIthRotation & {
+type HubTerminalObject = ClassObject<Building.Hub> & HasLocationWithRotation & {
   ActiveMilestone: HubTerminalActiveMilestoneObject;
   ShipDock: boolean;
   SchNam: 'N/A' | string;

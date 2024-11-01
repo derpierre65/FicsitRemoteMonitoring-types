@@ -1,7 +1,7 @@
-import type {Features, HasLocationWIthRotation, IDClassObject, InventoryItemObject, PowerInfoObject} from '../general';
+import type {Features, HasLocationWithRotation, IDClassObject, InventoryItemObject, PowerInfoObject} from '../general';
 import type {VehicleType} from '../../enums/vehicle';
 
-type VehiclesObject<Type extends VehicleType = VehicleType> = IDClassObject<Type> & HasLocationWIthRotation & {
+type VehiclesObject<Type extends VehicleType = VehicleType> = IDClassObject<Type> & HasLocationWithRotation & {
   PathName: string;
   Status: string; // TODO enum
   CurrentGear: number;
@@ -15,7 +15,7 @@ type VehiclesObject<Type extends VehicleType = VehicleType> = IDClassObject<Type
   FuelInventory: InventoryItemObject[];
 };
 
-type TruckStationObject = IDClassObject & HasLocationWIthRotation & {
+type TruckStationObject = IDClassObject & HasLocationWithRotation & {
   DockVehicleCount: number;
   LoadMode: string; // TODO enum
   TransferRate: number;

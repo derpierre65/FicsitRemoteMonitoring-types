@@ -2,13 +2,13 @@ import type {
   ClassObject,
   Features,
   FeaturesProperty,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   InventoryItemObject
 } from '../general';
 import type {Building} from '../../enums/building';
 import type {ResourceNodeObject} from './resource-node';
 
-type TowerObject = ClassObject<Building.RadarTower> & HasLocationWIthRotation & {
+type TowerObject = ClassObject<Building.RadarTower> & HasLocationWithRotation & {
   RevealRadius: number;
   RevealType: 'FOWRT_StaticNoGradient';
   Fauna: InventoryItemObject[];

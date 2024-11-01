@@ -1,12 +1,12 @@
 import type {
   Features,
   FeaturesProperty,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   IDClassObject,
   InventoryItemObject
 } from '../general';
 
-type PlayerObject = IDClassObject<'Char_Player_C'> & HasLocationWIthRotation & {
+type PlayerObject = IDClassObject<'Char_Player_C'> & HasLocationWithRotation & {
   Online: boolean;
   PlayerHP: number;
   Dead: boolean;

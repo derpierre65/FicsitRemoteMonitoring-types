@@ -1,7 +1,7 @@
 import type {
   IDClassObject,
   Features,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   InventoryItemObject,
   PowerInfoObject,
   ClassObject,
@@ -29,7 +29,7 @@ type FactoryProductionObject = InventoryItemObject & {
   ProdPercent: number;
 };
 
-type FactoryObject<Type extends FactoryType = FactoryType> = IDClassObject<Type> & HasLocationWIthRotation & {
+type FactoryObject<Type extends FactoryType = FactoryType> = IDClassObject<Type> & HasLocationWithRotation & {
   Recipe: string;
   RecipeClassName: string;
   production: FactoryProductionObject[];
@@ -43,17 +43,17 @@ type FactoryObject<Type extends FactoryType = FactoryType> = IDClassObject<Type>
   features: Features;
 };
 
-type HypertubeObject = HasLocationWIthRotation & {
+type HypertubeObject = HasLocationWithRotation & {
   Name: string;
   PowerInfo: PowerInfoObject;
 };
 
-type FrackingActivatorObject = HasLocationWIthRotation & {
+type FrackingActivatorObject = HasLocationWithRotation & {
   Name: string;
   PowerInfo: PowerInfoObject;
 };
 
-type ExtractorObject = ClassObject & HasLocationWIthRotation & {
+type ExtractorObject = ClassObject & HasLocationWithRotation & {
   Recipe: string;
   RecipeClassName: string;
   production: InventoryItemObject & {

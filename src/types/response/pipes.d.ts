@@ -2,11 +2,11 @@ import type {
   ClassObject,
   Coordinates,
   Features,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   PowerInfoObject
 } from '../general';
 
-type PumpObject = HasLocationWIthRotation & {
+type PumpObject = HasLocationWithRotation & {
   Name: string;
   PowerInfo: PowerInfoObject;
 };

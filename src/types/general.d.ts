@@ -50,7 +50,7 @@ type PowerInfoObject = {
   MaxPowerConsumed: number;
 };
 
-type HasLocationWIthRotation = {
+type HasLocationWithRotation = {
   location: CoordinatesWithRotation;
 };
 
@@ -70,6 +70,6 @@ export type {
   GeometryLine,
   Coordinates,
   CoordinatesWithRotation,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   HasLocation,
 }

@@ -1,7 +1,7 @@
-import type {Features, FeaturesProperty, HasLocationWIthRotation, IDClassObject} from '../general';
+import type {Features, FeaturesProperty, HasLocationWithRotation, IDClassObject} from '../general';
 import {ResourceNodePurity} from '../../enums/resource';
 
-type ResourceNodeObject = IDClassObject & HasLocationWIthRotation & {
+type ResourceNodeObject = IDClassObject & HasLocationWithRotation & {
   Purity: string;
   EnumPurity: ResourceNodePurity;
   ResourceForm: string;

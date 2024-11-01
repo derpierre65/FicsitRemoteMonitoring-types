@@ -2,13 +2,13 @@ import type {
   ClassObject,
   Features,
   FeaturesProperty,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   InventoryItemObject, PowerInfoObject
 } from '../general';
 import {TrainDockingStatus, type TrainLoadingMode, TrainLoadingStatus, TrainStatus} from '../../enums/train';
 import {Building} from '../../enums/building';
 
-type TrainObject = ClassObject & HasLocationWIthRotation & {
+type TrainObject = ClassObject & HasLocationWithRotation & {
   TotalMass: number;
   PayloadMass: number;
   MaxPayloadMass: number;
@@ -30,7 +30,7 @@ type TrainObject = ClassObject & HasLocationWIthRotation & {
   features: Features<FeaturesProperty<'Train'>>;
 };
 
-type TrainStationCargoInventoryObject = ClassObject<Building.TrainDockingStation> & HasLocationWIthRotation & {
+type TrainStationCargoInventoryObject = ClassObject<Building.TrainDockingStation> & HasLocationWithRotation & {
   PowerInfo: PowerInfoObject;
   TransferRate: number;
   InflowRate: number;
@@ -41,7 +41,7 @@ type TrainStationCargoInventoryObject = ClassObject<Building.TrainDockingStation
   Inventory: InventoryItemObject[];
 };
 
-type TrainStationObject = ClassObject<'FGTrainStationIdentifier'> & HasLocationWIthRotation & {
+type TrainStationObject = ClassObject<'FGTrainStationIdentifier'> & HasLocationWithRotation & {
   TransferRate: number;
   InflowRate: number;
   OutflowRate: number;

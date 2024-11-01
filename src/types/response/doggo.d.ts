@@ -1,13 +1,13 @@
 import type {
   Features,
   FeaturesProperty,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   IDClassObject,
   InventoryItemObject,
 } from '../general';
 import {EntityType} from '../../enums/entity-type';
 
-type DoggoObject = IDClassObject<EntityType.Doggo> & HasLocationWIthRotation & {
+type DoggoObject = IDClassObject<EntityType.Doggo> & HasLocationWithRotation & {
   Inventory: InventoryItemObject[];
   features: Features<FeaturesProperty<'Lizard Doggo'>>;
 };

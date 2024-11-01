@@ -1,4 +1,4 @@
-import type {ClassObject, HasLocationWIthRotation, PowerInfoObject} from '../general';
+import type {ClassObject, HasLocationWithRotation, PowerInfoObject} from '../general';
 
 type ResourceSinkObject = ClassObject & {
   CouponType: ClassObject;
@@ -25,7 +25,7 @@ type SinkListObject = ClassObject & {
   PointsOverride: number;
 };
 
-type ResourceSinkBuildingObject = HasLocationWIthRotation & {
+type ResourceSinkBuildingObject = HasLocationWithRotation & {
   ID: number;
   PowerInfo: PowerInfoObject;
 };

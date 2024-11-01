@@ -1,11 +1,11 @@
 import type {
   Features,
   FeaturesProperty,
-  HasLocationWIthRotation,
+  HasLocationWithRotation,
   IDClassObject
 } from '../general';
 
-type PowerSlugObject = IDClassObject & HasLocationWIthRotation & {
+type PowerSlugObject = IDClassObject & HasLocationWithRotation & {
   features: Features<FeaturesProperty<'Power Slug', ''>>
 };
 
