@@ -5,3 +5,4 @@ export * from './enums/entity-type';
 export * from './enums/item-type';
 export * from './enums/power-slug';
 export * from './enums/train';
+export * from './enums/vehicle';
