@@ -3,9 +3,9 @@ import type {
   Features,
   FeaturesProperty,
   HasLocationWIthRotation,
-  InventoryItemObject
+  InventoryItemObject, PowerInfoObject
 } from '../general';
-import {TrainDockingStatus, type TrainLoadingMode, TrainLoadingStatus} from '../../enums/train';
+import {TrainDockingStatus, type TrainLoadingMode, TrainLoadingStatus, TrainStatus} from '../../enums/train';
 import {Building} from '../../enums/building';
 
 type TrainObject = ClassObject & HasLocationWIthRotation & {
@@ -17,15 +17,21 @@ type TrainObject = ClassObject & HasLocationWIthRotation & {
   TrainStation: string;
   Derailed: boolean;
   PendingDerail: boolean;
-  Status: 'Derailed';
+  Status: TrainStatus;
   TimeTable: {
     StationName: string;
+  }[];
+  Vehicles: ClassObject & {
+    TotalMass: number;
+    PayloadMass: number;
+    MaxPayloadMass: number;
+    Inventory: InventoryItemObject[];
   }[];
   features: Features<FeaturesProperty<'Train'>>;
 };
 
 type TrainStationCargoInventoryObject = ClassObject<Building.TrainDockingStation> & HasLocationWIthRotation & {
-  PowerConsumption: number;
+  PowerInfo: PowerInfoObject;
   TransferRate: number;
   InflowRate: number;
   OutflowRate: number;
@@ -36,12 +42,12 @@ type TrainStationCargoInventoryObject = ClassObject<Building.TrainDockingStation
 };
 
 type TrainStationObject = ClassObject<'FGTrainStationIdentifier'> & HasLocationWIthRotation & {
-  PowerConsumption: number;
   TransferRate: number;
   InflowRate: number;
   OutflowRate: number;
   CargoInventory: TrainStationCargoInventoryObject[];
   CircuitID: number;
+  PowerInfo: PowerInfoObject;
   features: Features<FeaturesProperty<'Train Station'>>
 };
 
