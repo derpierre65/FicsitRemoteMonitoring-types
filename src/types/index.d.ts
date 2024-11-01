@@ -21,3 +21,4 @@ export type * from './response/session';
 export type * from './response/space-elevator';
 export type * from './response/switches';
 export type * from './response/trains';
+export type * from './response/vehicles';
