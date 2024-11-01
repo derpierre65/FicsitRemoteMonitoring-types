@@ -20,6 +20,7 @@ type GetTractorResponse = VehiclesObject<VehicleType.Tractor>[];
 type GetExplorerResponse = VehiclesObject<VehicleType.Explorer>[];
 type GetFactoryCartResponse = VehiclesObject<VehicleType.FactoryCart>[];
 type GetVehiclesResponse = VehiclesObject[];
+type GetPathsResponse = unknown[]; // same response like getPipes
 
 export type {
   VehiclesObject,
@@ -28,4 +29,5 @@ export type {
   GetExplorerResponse,
   GetFactoryCartResponse,
   GetVehiclesResponse,
+  GetPathsResponse,
 }
