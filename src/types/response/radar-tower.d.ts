@@ -6,6 +6,7 @@ import type {
   InventoryItemObject
 } from '../general';
 import type {Building} from '../../enums/building';
+import type {ResourceNodeObject} from './resource-node';
 
 type TowerObject = ClassObject<Building.RadarTower> & HasLocationWIthRotation & {
   RevealRadius: number;
@@ -13,6 +14,7 @@ type TowerObject = ClassObject<Building.RadarTower> & HasLocationWIthRotation & 
   Fauna: InventoryItemObject[];
   Signal: InventoryItemObject[];
   Flora: InventoryItemObject[];
+  ScannedResourceNodes: Omit<ResourceNodeObject, 'features'>[];
   features: Features<FeaturesProperty<'Radar Tower', 'Radar Tower'>>;
 };
 
