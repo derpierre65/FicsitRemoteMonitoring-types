@@ -1,5 +1,5 @@
 type PowerObject = {
-  CircuitID: number;
+  CircuitGroupID: number;
   PowerProduction: number;
   PowerConsumed: number;
   PowerCapacity: number;
@@ -11,6 +11,7 @@ type PowerObject = {
   BatteryCapacity: number;
   BatteryTimeEmpty: string;
   BatteryTimeFull: string;
+  AssociatedCircuits: number[];
   FuseTriggered: boolean;
 };
 
