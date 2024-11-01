@@ -42,6 +42,16 @@ type FactoryObject<Type extends FactoryType = FactoryType> = IDClassObject<Type>
   features: Features;
 };
 
+type HypertubeObject = HasLocationWIthRotation & {
+  Name: string;
+  PowerInfo: PowerInfoObject;
+};
+
+type FrackingActivatorObject = HasLocationWIthRotation & {
+  Name: string;
+  PowerInfo: PowerInfoObject;
+};
+
 type GetFactoryResponse = FactoryObject[];
 type GetSmelterResponse = FactoryObject<Building.Smelter>[];
 type GetConstructorResponse = FactoryObject<Building.Constructor>[];
@@ -53,12 +63,17 @@ type GetBlenderResponse = FactoryObject<Building.Blender>[];
 type GetParticleResponse = FactoryObject<Building.ParticleAccelerator>[];
 type GetPackagerResponse = FactoryObject<Building.Packager>[];
 
+type GetFrackingActivatorResponse = FrackingActivatorObject[];
+type GetHypertubeResponse = HypertubeObject[];
+
 export type {
   FactoryType,
   FactoryObject,
   FactoryIngredientObject,
   FactoryProductionObject,
   FactoryPowerInfoObject,
+  HypertubeObject,
+  FrackingActivatorObject,
   GetFactoryResponse,
   GetSmelterResponse,
   GetConstructorResponse,
@@ -69,4 +84,6 @@ export type {
   GetBlenderResponse,
   GetParticleResponse,
   GetPackagerResponse,
+  GetFrackingActivatorResponse,
+  GetHypertubeResponse,
 }
