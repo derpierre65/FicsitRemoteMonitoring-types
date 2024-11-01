@@ -6,6 +6,7 @@ export type * from './response/drop-pod';
 export type * from './response/factory';
 export type * from './response/generator';
 export type * from './response/hub-terminal';
+export type * from './response/hypertube';
 export type * from './response/inventory';
 export type * from './response/mod-list';
 export type * from './response/player';
