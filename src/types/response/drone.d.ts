@@ -61,4 +61,6 @@ type GetDroneResponse = DroneObject[];
 export type {
   DroneObject,
   GetDroneResponse,
+  DroneStationObject,
+  GetDroneStationResponse,
 }
