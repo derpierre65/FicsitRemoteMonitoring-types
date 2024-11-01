@@ -14,6 +14,7 @@ export type * from './response/power';
 export type * from './response/power-slug';
 export type * from './response/prod-stats';
 export type * from './response/radar-tower';
+export type * from './response/research';
 export type * from './response/resource-node';
 export type * from './response/resource-sink';
 export type * from './response/session';
