@@ -88,7 +88,6 @@ export type {
   FactoryObject,
   FactoryIngredientObject,
   FactoryProductionObject,
-  FactoryPowerInfoObject,
   HypertubeObject,
   FrackingActivatorObject,
   GetFactoryResponse,
