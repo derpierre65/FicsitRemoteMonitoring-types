@@ -1,6 +1,7 @@
 export type * from './general';
 export type * from './response/belt';
 export type * from './response/doggo';
+export type * from './response/drone';
 export type * from './response/drop-pod';
 export type * from './response/factory';
 export type * from './response/generator';

@@ -51,6 +51,7 @@ type GetManufacturerResponse = FactoryObject<Building.Manufacturer>[];
 type GetRefineryResponse = FactoryObject<Building.Refinery>[];
 type GetBlenderResponse = FactoryObject<Building.Blender>[];
 type GetParticleResponse = FactoryObject<Building.ParticleAccelerator>[];
+type GetPackagerResponse = FactoryObject<Building.Packager>[];
 
 export type {
   FactoryType,
@@ -67,4 +68,5 @@ export type {
   GetRefineryResponse,
   GetBlenderResponse,
   GetParticleResponse,
+  GetPackagerResponse,
 }
