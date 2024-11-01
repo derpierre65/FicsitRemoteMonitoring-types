@@ -4,6 +4,7 @@ import type {
   HasLocationWIthRotation,
   InventoryItemObject,
   PowerInfoObject,
+  ClassObject,
 } from '../general';
 import type {Building} from '../../enums/building';
 
@@ -52,6 +53,21 @@ type FrackingActivatorObject = HasLocationWIthRotation & {
   PowerInfo: PowerInfoObject;
 };
 
+type ExtractorObject = ClassObject & HasLocationWIthRotation & {
+  Recipe: string;
+  RecipeClassName: string;
+  production: InventoryItemObject & {
+    CurrentProd: number;
+    MaxProd: number;
+    ProdPercent: number;
+  }[];
+  ManuSpeed: number;
+  IsConfigured: boolean;
+  IsProducing: boolean;
+  IsPaused: boolean;
+  PowerInfo: PowerInfoObject;
+};
+
 type GetFactoryResponse = FactoryObject[];
 type GetSmelterResponse = FactoryObject<Building.Smelter>[];
 type GetConstructorResponse = FactoryObject<Building.Constructor>[];
@@ -63,6 +79,7 @@ type GetBlenderResponse = FactoryObject<Building.Blender>[];
 type GetParticleResponse = FactoryObject<Building.ParticleAccelerator>[];
 type GetPackagerResponse = FactoryObject<Building.Packager>[];
 
+type GetExtractorResponse = ExtractorObject[];
 type GetFrackingActivatorResponse = FrackingActivatorObject[];
 type GetHypertubeResponse = HypertubeObject[];
 
