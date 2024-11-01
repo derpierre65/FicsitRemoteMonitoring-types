@@ -20,11 +20,19 @@ type ResourceSinkObject = ClassObject & {
   PointsToCoupon: number;
 };
 
+type SinkListObject = ClassObject & {
+  Points: number;
+  PointsOverride: number;
+};
+
+type GetSinkListResponse = SinkListObject[];
 type GetResourceSinkResponse = ResourceSinkObject[];
 type GetExplorationSinkResponse = ResourceSinkObject[];
 
 export type {
   ResourceSinkObject,
+  SinkListObject,
+  GetSinkListResponse,
   GetResourceSinkResponse,
   GetExplorationSinkResponse,
 };
