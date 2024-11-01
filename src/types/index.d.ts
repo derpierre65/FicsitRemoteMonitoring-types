@@ -9,6 +9,7 @@ export type * from './response/hub-terminal';
 export type * from './response/hypertube';
 export type * from './response/inventory';
 export type * from './response/mod-list';
+export type * from './response/pipes';
 export type * from './response/player';
 export type * from './response/power';
 export type * from './response/power-slug';
