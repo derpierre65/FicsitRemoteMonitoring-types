@@ -13,7 +13,7 @@ type SpaceElevatorPhaseItemObject = InventoryItemObject & {
 };
 
 type SpaceElevatorObject = ClassObject<Building.SpaceElevator> & HasLocationWithRotation & {
-  CurrentPhase: InventoryItemObject[];
+  CurrentPhase: SpaceElevatorPhaseItemObject[];
   FullyUpgraded: boolean;
   UpgradeReady: boolean;
   features: Features<FeaturesProperty<'Space Elevator', 'Space Elevator'>>
