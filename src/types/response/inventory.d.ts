@@ -8,3 +8,10 @@ type StorageInvObject = ClassObject & HasLocationWIthRotation & {
 type GetStorageInvResponse = StorageInvObject[];
 type GetCloudInvResponse = InventoryItemObject[];
 type GetWorldInvResponse = InventoryItemObject[];
+
+export type {
+  StorageInvObject,
+  GetStorageInvResponse,
+  GetCloudInvResponse,
+  GetWorldInvResponse,
+}
