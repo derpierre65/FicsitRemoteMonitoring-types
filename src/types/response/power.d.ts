@@ -1,3 +1,5 @@
+import type {ClassObject, PowerInfoObject} from '../general';
+
 type PowerObject = {
   CircuitGroupID: number;
   PowerProduction: number;
@@ -15,9 +17,16 @@ type PowerObject = {
   FuseTriggered: boolean;
 };
 
+type PowerUsageObject = ClassObject & {
+  PowerInfo: PowerInfoObject;
+};
+
+type GetPowerUsageResponse = PowerUsageObject[];
 type GetPowerResponse = PowerObject[];
 
 export type {
   PowerObject,
+  PowerUsageObject,
+  GetPowerUsageResponse,
   GetPowerResponse,
 };
