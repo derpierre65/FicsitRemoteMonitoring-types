@@ -1,6 +1,6 @@
-import type {ClassObject, InventoryItemObject} from '../general';
+import type {ClassObject, IDClassObject, InventoryItemObject} from '../general';
 
-type RecipeObject = ClassObject & {
+type RecipeObject = IDClassObject & {
   Category: string; // TODO enum?
   Events: string[];
   Ingredients: (InventoryItemObject & {
@@ -16,7 +16,7 @@ type RecipeObject = ClassObject & {
   FactoryDuration: number;
 };
 
-type SchematicsObject = ClassObject & {
+type SchematicsObject = IDClassObject & {
   TechTier: number;
   Type: string; // TODO enum
   Recipes: RecipeObject[];

@@ -1,13 +1,13 @@
 import type {
   ClassObject,
   Features,
-  HasLocationWithRotation,
+  HasLocationWithRotation, IDClassObject,
   InventoryItemObject,
   PowerInfoObject,
 } from '../general';
 import {Building} from '../../enums/building';
 
-type GeneratorObject<ClassName> = ClassObject<ClassName> & HasLocationWithRotation & {
+type GeneratorObject<ClassName> = IDClassObject<ClassName> & HasLocationWithRotation & {
   BaseProd: number;
   DynamicProdCapacity: number;
   DynamicProdDemandFactor: number;
@@ -33,8 +33,9 @@ type GeneratorObject<ClassName> = ClassObject<ClassName> & HasLocationWithRotati
   GeoMaxPower: number;
   AvailableFuel: InventoryItemObject[];
   WasteInventory: InventoryItemObject[];
-  features: Features;
+  FuelInventory: InventoryItemObject[];
   PowerInfo: PowerInfoObject;
+  features: Features;
 };
 
 type GetGeneratorsResponse = GeneratorObject<

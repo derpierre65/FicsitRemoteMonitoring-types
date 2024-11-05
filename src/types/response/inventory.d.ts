@@ -1,6 +1,6 @@
-import type {ClassObject, Features, HasLocationWithRotation, InventoryItemObject} from '../general';
+import type {IDClassObject, Features, HasLocationWithRotation, InventoryItemObject} from '../general';
 
-type StorageInvObject = ClassObject & HasLocationWithRotation & {
+type StorageInvObject = IDClassObject & HasLocationWithRotation & {
   Inventory: InventoryItemObject[];
   features: Features;
 };

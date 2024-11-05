@@ -4,11 +4,12 @@ type ClassObject<ClassName extends string = string> = {
 };
 
 type IDClassObject<ClassName extends string = string> = ClassObject<ClassName> & {
-  ID: number;
+  ID: string;
 }
 
 type InventoryItemObject = ClassObject & {
   Amount: number;
+  MaxAmount: number;
 };
 
 type Coordinates = {

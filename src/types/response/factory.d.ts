@@ -4,7 +4,6 @@ import type {
   HasLocationWithRotation,
   InventoryItemObject,
   PowerInfoObject,
-  ClassObject,
 } from '../general';
 import type {Building} from '../../enums/building';
 
@@ -44,16 +43,18 @@ type FactoryObject<Type extends FactoryType = FactoryType> = IDClassObject<Type>
 };
 
 type HypertubeObject = HasLocationWithRotation & {
+  ID: string;
   Name: string;
   PowerInfo: PowerInfoObject;
 };
 
 type FrackingActivatorObject = HasLocationWithRotation & {
+  ID: string;
   Name: string;
   PowerInfo: PowerInfoObject;
 };
 
-type ExtractorObject = ClassObject & HasLocationWithRotation & {
+type ExtractorObject = IDClassObject & HasLocationWithRotation & {
   Recipe: string;
   RecipeClassName: string;
   production: InventoryItemObject & {

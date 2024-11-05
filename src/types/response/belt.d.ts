@@ -1,6 +1,6 @@
-import type {ClassObject, Coordinates, Features} from '../general';
+import type {IDClassObject, Coordinates, Features} from '../general';
 
-type BeltsObject = ClassObject & {
+type BeltsObject = IDClassObject & {
   location0: Coordinates;
   Connected0: boolean;
   location1: Coordinates;
