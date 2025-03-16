@@ -41,7 +41,7 @@ type TrainStationCargoInventoryObject = IDClassObject<Building.TrainDockingStati
   Inventory: InventoryItemObject[];
 };
 
-type TrainStationObject = ClassObject<'FGTrainStationIdentifier'> & HasLocationWithRotation & {
+type TrainStationObject = IDClassObject<'FGTrainStationIdentifier'> & HasLocationWithRotation & {
   TransferRate: number;
   InflowRate: number;
   OutflowRate: number;
