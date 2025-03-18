@@ -1,4 +1,4 @@
-import type {ClassObject, PowerInfoObject} from '../general';
+import type {HasLocationWithRotation, IDClassObject, PowerInfoObject} from '../general';
 
 type PowerObject = {
   CircuitGroupID: number;
@@ -17,7 +17,7 @@ type PowerObject = {
   FuseTriggered: boolean;
 };
 
-type PowerUsageObject = ClassObject & {
+type PowerUsageObject = IDClassObject & HasLocationWithRotation & {
   PowerInfo: PowerInfoObject;
 };
 
