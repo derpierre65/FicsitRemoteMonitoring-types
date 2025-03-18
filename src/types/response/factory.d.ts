@@ -38,7 +38,7 @@ type FactoryObject<Type extends FactoryType = FactoryType> = IDClassObject<Type>
   IsConfigured: boolean;
   IsProducing: boolean;
   IsPaused: boolean;
-  PowerInfo: PowerInfoObject[];
+  PowerInfo: PowerInfoObject;
   features: Features;
 };
 
